@@ -1,5 +1,4 @@
 from flask import Flask, render_template, request, url_for, redirect, flash
-from flask_wtf import FlaskForm
 from get_poster import *
 from find_movie import *
 
@@ -18,11 +17,22 @@ def homepage():
             genres = request.form.getlist('genre')
             popularity = request.form['pop']
             print(year, rating, genres, popularity)
-            movie_name = find_movie(year, rating, popularity, genres)[0]
-            poster = get_poster(movie_name)
-            print(movie_name)
+            movie = find_movie(year, rating, popularity, genres)
+            # movie_name = movie[0]
+            # movie_genres = movie[2]
+            # votes = movie[3]
+            # movie_rating = movie[-1]
+            poster = get_poster(movie[0])
+            info = {
+                'name': movie[0],
+                'year': year,
+                'genres': movie[2],
+                'votes': movie[3],
+                'rating': movie[-1],
+                'poster': poster
+            }
             print(poster)
-            # return render_template('no_movies.html', movie=movie_name, poster=poster)
+            return render_template('movie.html', info=info)
         except NoSuchMovie as e:
             print(e)
             print("Mesht no movies")
@@ -43,12 +53,6 @@ def goback():
     if request.method == "POST":
         return redirect(url_for('homepage'))
     return render_template('no_movies.html')
-
-
-
-
-
-
 
 
 if __name__ == "__main__":
