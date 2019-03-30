@@ -1,6 +1,6 @@
 from get_poster import *
 
-class NoSuchMovie:
+class NoSuchMovie(Exception):
     pass
 
 def find_movie(year, score, popularity, genres):

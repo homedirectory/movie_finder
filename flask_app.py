@@ -1,8 +1,7 @@
 from flask import Flask, render_template, request, url_for, redirect, flash
 from flask_wtf import FlaskForm
-# from find_movie import *
 from get_poster import *
-from find_movie_2 import *
+from find_movie import *
 
 
 app = Flask(__name__)
@@ -23,25 +22,33 @@ def homepage():
             poster = get_poster(movie_name)
             print(movie_name)
             print(poster)
-            # return render_template('result.html', movie=movie_name, poster=poster)
+            # return render_template('no_movies.html', movie=movie_name, poster=poster)
         except NoSuchMovie as e:
             print(e)
             print("Mesht no movies")
             error = "Something went wrong. Please try again"
         #     # flash(error)
-            return render_template('homepage.html', error=error)
+            return redirect(url_for('goback'))
         except NoPoster as e:
             print(e)
             error = "Something went wrong. Please try again"
             return render_template('homepage.html', error=error)
         except:
             return render_template('homepage.html')
-
-
-
-
-
     return render_template('homepage.html')
+
+
+@app.route("/case1", methods=["GET", "POST"])
+def goback():
+    if request.method == "POST":
+        return redirect(url_for('homepage'))
+    return render_template('no_movies.html')
+
+
+
+
+
+
 
 
 if __name__ == "__main__":
