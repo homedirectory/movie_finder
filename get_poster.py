@@ -1,6 +1,9 @@
 import http.client
 import json
 
+class NoPoster(Exception):
+    pass
+
 
 def get_json(source):
     conn = http.client.HTTPSConnection("www.omdbapi.com")
@@ -11,5 +14,8 @@ def get_json(source):
     return json_data
 
 def get_poster(movie):
-    json_data = get_json("/?t={}&apikey=1fd32d15".format("".join(e for e in movie if e.isalnum() or e == " ").replace(" ", "+").lower()))
+    try:
+        json_data = get_json("/?t={}&apikey=1fd32d15".format("".join(e for e in movie if e.isalnum() or e == " ").replace(" ", "+").lower()))
+    except:
+        raise NoPoster
     return json_data["Poster"]
