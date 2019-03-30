@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" type="text/css" href="../static/nomovies.css">
+    <link rel=stylesheet type=text/css href="../static/mov.css">
     <meta charset="UTF-8">
-    <title>Oops...</title>
+    <title>Your movie</title>
 </head>
 <body>
-<h1 id="text1">No movies were found</h1>
-<h2 id="text2">Try changing your filters</h2>
+<h1>{{ info.name }} ({{info.year}})</h1>
+<p>IMDb score: {{info.rating}} ({{info.votes}} votes)</p>
+<p>{{info.genres}}</p>
+<img src="{{info.poster}}">
 <div id="block">
     <form action= "" method="post" id="form1">
     </form>

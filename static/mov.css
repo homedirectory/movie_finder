@@ -1,0 +1,40 @@
+#block {
+    border-radius: 50px;
+    position: absolute;
+    background: #cccccc;
+    margin: auto;
+    top: 0;
+    right: 0;
+    bottom: 200px;
+    left: 0;
+    border: 10px solid lightskyblue;
+    height: 300px;
+    width: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+#text{
+    font-size: 30px;
+    font-variant: small-caps;
+}
+#sub{
+    background-color: lightskyblue;
+    border-radius: 10px;
+    padding: 15px 25px;
+    font-size: 20px;
+    font-variant: small-caps;
+    box-shadow: 0 5px #999;
+}
+
+#sub:hover{
+    background-color: lightsteelblue;
+}
+
+#sub:active{
+    box-shadow: 0 5px #666;
+    background-color: lightsteelblue;
+    transform: translateY(4px);
+}
