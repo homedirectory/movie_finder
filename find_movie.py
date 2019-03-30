@@ -25,7 +25,8 @@ def find_movie(year, score, popularity, genres):
     for movie in movies:
         try:
             same_genres = True
-            if int(movie[1]) == year and max_votes >= int(movie[3]) >= min_votes and float(movie[4]) >= score:
+            score_check = float(movie[4]) >= score if score > 0 else float(movie[4]) <= score
+            if int(movie[1]) == year and max_votes >= int(movie[3]) >= min_votes and score_check:
                 for genre in genres:
                     if genre not in movie[2].split("|"):
                         same_genres = False
