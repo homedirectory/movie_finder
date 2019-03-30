@@ -1,10 +1,9 @@
 from get_poster import *
 
-class NoSuchMovie(Exception):
+class NoSuchMovie:
     pass
 
-
-def find_movie(year, score, genres, votes=0):
+def find_movie(year, score, popularity, genres):
     f = open("movies_dataset.csv", encoding="utf-8")
     movies = []
     with f:
@@ -13,11 +12,20 @@ def find_movie(year, score, genres, votes=0):
 
     results = []
 
+    if popularity == "very popular":
+        min_votes = 150000
+        max_votes = 10000000
+    elif popularity == "popular":
+        min_votes = 50000
+        max_votes = 150000
+    elif popularity == "not popular":
+        min_votes = 0
+        max_votes = 50000
+
     for movie in movies:
         try:
             same_genres = True
-            score_check = float(movie[4]) >= score if score > 0 else float(movie[4]) <= score
-            if int(movie[1]) == year and int(movie[3]) >= votes and score_check:
+            if int(movie[1]) == year and max_votes >= int(movie[3]) >= min_votes and float(movie[4]) >= score:
                 for genre in genres:
                     if genre not in movie[2].split("|"):
                         same_genres = False
@@ -25,13 +33,12 @@ def find_movie(year, score, genres, votes=0):
                     results.append(movie)
         except ValueError:
             continue
-    # print(results)
-    if len(results) == 0:
+
+    if not results:
         raise NoSuchMovie
+
     best_movie = results[0]
     for result in results:
         if float(result[4]) > float(best_movie[4]):
             best_movie = result
     return best_movie
-
-print(find_movie(2017, 5, ['Drama']))
