@@ -81,7 +81,7 @@ option{
     margin-left: 50px;
     margin-bottom: -000px;
     margin-top: 35px;
-    width: 250px;
+    width: 300px;
     /*border-style: solid;*/
     /*border-width: medium;*/
     align-items: center;
@@ -89,12 +89,18 @@ option{
 }
 
 #submit_button{
-    background-color: lightsteelblue;
+    background-color: lightgrey;
     border-radius: 30px;
-    padding: 55px 85px;
-    font-size: 20px;
+    padding: 40px 60px;
+    font-size: 40px;
     font-variant: small-caps;
     box-shadow: 0 5px #999;
+}
+#submit_button:hover{
+    background-color: #c6c6c6;
+}
+#submit_button:active{
+    background-color: #c6c6c6;
 }
 
 .styled_select{
@@ -141,4 +147,9 @@ option{
     margin-left: 900px;
     font-family: Arial;
 }
-
+.choice{
+    margin-right: 10px
+}
+.choice2{
+    margin-right: 5px
+}

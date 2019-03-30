@@ -1,22 +1,19 @@
 body{
-    background-image: url("back.jpg");
+    background-image: url("back1.jpg");
     background-size: cover;
 }
 
 #title{
     font-family: Arial;
-    color: white;
     text-align: center;
-    margin-top: 150px
+    margin-top: 100px
 }
 #imdb{
     font-family: Arial;
-    color: white;
     text-align: center;
 }
 #genres{
     font-family: Arial;
-    color: white;
     text-align: center;
 }
 #poster{
@@ -29,7 +26,7 @@ body{
     position: absolute;
     /*background: #cccccc;*/
     margin: auto;
-    top: 400px;
+    top: 550px;
     right: 0;
     bottom: 0;
     left: 0;
@@ -46,7 +43,7 @@ body{
     font-variant: small-caps;
 }
 #sub{
-    background-color: lightskyblue;
+    background-color: lightgrey;
     border-radius: 10px;
     padding: 15px 25px;
     font-size: 20px;
@@ -55,11 +52,11 @@ body{
 }
 
 #sub:hover{
-    background-color: lightsteelblue;
+    background-color: #c6c6c6;
 }
 
 #sub:active{
     box-shadow: 0 5px #666;
-    background-color: lightsteelblue;
+    background-color: #c6c6c6;
     transform: translateY(4px);
 }
