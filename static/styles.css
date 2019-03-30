@@ -69,6 +69,15 @@
 
 .ratings{
     display: block;
+    padding: 20px;
+    margin: auto;
+    margin-left: 470px;
+    margin-bottom: -000px;
+    margin-top: -135px;
+    width: 250px;
+    /*border-style: solid;*/
+    /*border-width: medium;*/
+    align-items: center;
 }
 
 #submit_button{
@@ -78,4 +87,43 @@
     font-size: 20px;
     font-variant: small-caps;
     box-shadow: 0 5px #999;
+}
+
+.styled_select{
+    background: url(http://i62.tinypic.com/2e3ybe1.jpg) no-repeat right center;
+   height: 34px;
+   width: 240px;
+    /*position: center;*/
+}
+
+.styled_select select {
+   border: 1px solid #ccc;
+   font-size: 16px;
+   height: 34px;
+   width: 268px;
+}
+
+#popularity{
+    margin: auto;
+    margin-left: 850px;
+    margin-bottom: -000px;
+    margin-top: -120px;
+    width: 300px;
+}
+
+#genres{
+    margin: auto;
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-bottom: 100px;
+    margin-top: 100px;
+    width: 250px;
+}
+
+#years{
+    margin-left: 70px;
+}
+
+#rating\ header{
+    /*padding: 5px;*/
 }
