@@ -47,6 +47,8 @@ def homepage():
             return render_template('homepage.html')
     return render_template('homepage.html')
 
+@app.route
+
 
 @app.route("/case1", methods=["GET", "POST"])
 def goback():

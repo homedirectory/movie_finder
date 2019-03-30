@@ -1,6 +1,6 @@
 body{
-    background-image: url("back1.jpg");
-    background-size: auto;
+    background-image: url("back.jpg");
+    background-size: cover;
 }
 
 #sadface{
@@ -14,17 +14,16 @@ body{
 }
 
 #text1{
-    color: black;
-    text-align: center;
-    margin-top: 200px;
     font-family: Arial;
-
+    color: white;
+    text-align: center;
+    margin-top: 300px;
 }
 
 #text2{
-    color: black;
-    text-align: center;
     font-family: Arial;
+    color: white;
+    text-align: center;
 }
 
 #block {
@@ -32,7 +31,7 @@ body{
     position: absolute;
     /*background: #cccccc;*/
     margin: auto;
-    top: -300px;
+    top: 240px;
     right: 0;
     bottom: 0;
     left: 0;
@@ -46,18 +45,15 @@ body{
 }
 
 #sub{
-    background-color: lightsteelblue;
+    background-color: lightskyblue;
     border-radius: 10px;
-    padding: 35px 55px;
+    padding: 15px 25px;
     font-size: 20px;
+    font-variant: small-caps;
     box-shadow: 0 5px #999;
-    font-family: Arial;
-    /*margin-top: -250px;*/
-    /*margin-bottom: 50px;*/
-    /*top: 200px;*/
-    /*bottom: 100px;*/
-    /*right: 0;*/
-    /*left: 0;*/
+    margin: auto;
+    right: 0;
+    left: 0;
 }
 
 #sub:hover{

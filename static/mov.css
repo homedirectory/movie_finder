@@ -1,21 +1,46 @@
+body{
+    background-image: url("back.jpg");
+    background-size: cover;
+}
+
+#title{
+    font-family: Arial;
+    color: white;
+    text-align: center;
+    margin-top: 150px
+}
+#imdb{
+    font-family: Arial;
+    color: white;
+    text-align: center;
+}
+#genres{
+    font-family: Arial;
+    color: white;
+    text-align: center;
+}
+#poster{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
 #block {
-    border-radius: 50px;
+    /*border-radius: 50px;*/
     position: absolute;
-    background: #cccccc;
+    /*background: #cccccc;*/
     margin: auto;
-    top: 0;
+    top: 400px;
     right: 0;
-    bottom: 200px;
+    bottom: 0;
     left: 0;
-    border: 10px solid lightskyblue;
-    height: 300px;
-    width: 400px;
-    display: flex;
+    /*border: 10px solid lightskyblue;*/
+    height: 50px;
+    width: 200px;
+    /*display: flex;*/
     align-items: center;
     justify-content: center;
     text-align: center;
 }
-
 #text{
     font-size: 30px;
     font-variant: small-caps;

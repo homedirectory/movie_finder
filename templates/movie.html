@@ -6,10 +6,10 @@
     <title>Your movie</title>
 </head>
 <body>
-<h1>{{ info.name }} ({{info.year}})</h1>
-<p>IMDb score: {{info.rating}} ({{info.votes}} votes)</p>
-<p>{{info.genres}}</p>
-<img src="{{info.poster}}">
+<h1 id="title">{{ info.name }} ({{info.year}})</h1>
+<h2 id="imdb">IMDb score: {{info.rating}} ({{info.votes}} votes)</h2>
+<h2 id="genres">{{info.genres}}</h2>
+<img src="{{info.poster}}" id="poster">
 <div id="block">
     <form action= "" method="post" id="form1">
     </form>
