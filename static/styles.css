@@ -66,24 +66,32 @@
     /*background-color: lightsteelblue;*/
     /*transform: translateY(4px);*/
 /*}*/
+body{
+    background-image: url("back1.jpg");
+}
 
+option{
+    color: red;
+    font-weight: normal;
+}
 .ratings{
     display: block;
     padding: 20px;
     margin: auto;
-    margin-left: 470px;
+    margin-left: 50px;
     margin-bottom: -000px;
-    margin-top: -135px;
+    margin-top: 35px;
     width: 250px;
     /*border-style: solid;*/
     /*border-width: medium;*/
     align-items: center;
+    font-family: Arial;
 }
 
 #submit_button{
-    background-color: lightskyblue;
-    border-radius: 10px;
-    padding: 15px 25px;
+    background-color: lightsteelblue;
+    border-radius: 30px;
+    padding: 55px 85px;
     font-size: 20px;
     font-variant: small-caps;
     box-shadow: 0 5px #999;
@@ -105,25 +113,32 @@
 
 #popularity{
     margin: auto;
-    margin-left: 850px;
+    margin-left: 70px;
     margin-bottom: -000px;
-    margin-top: -120px;
+    margin-top: 50px;
     width: 300px;
+    font-family: Arial;
 }
 
 #genres{
     margin: auto;
-    margin-left: 0px;
+    margin-left: 540px;
     margin-right: 0px;
-    margin-bottom: 100px;
-    margin-top: 100px;
+    margin-bottom: 500px;
+    margin-top: -430px;
     width: 250px;
+    font-family: Arial;
 }
 
 #years{
     margin-left: 70px;
+    font-family: Arial;
 }
 
-#rating\ header{
-    /*padding: 5px;*/
+#butt{
+    /*margin: auto;*/
+    margin-top: -750px;
+    margin-left: 900px;
+    font-family: Arial;
 }
+
