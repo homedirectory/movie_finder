@@ -1,1 +1,0 @@
-ratings.list ftp://ftp.funet.fi/pub/mirrors/ftp.imdb.com/pub/frozendata/

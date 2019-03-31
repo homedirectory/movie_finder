@@ -28,18 +28,14 @@ body{
 }
 
 #block {
-    /*border-radius: 50px;*/
     position: absolute;
-    /*background: #cccccc;*/
     margin: auto;
     top: -100px;
     right: 0;
     bottom: 0;
     left: 0;
-    /*border: 10px solid lightskyblue;*/
     height: 50px;
     width: 200px;
-    /*display: flex;*/
     align-items: center;
     justify-content: center;
     text-align: center;
@@ -52,12 +48,6 @@ body{
     font-size: 20px;
     box-shadow: 0 5px #999;
     font-family: Arial;
-    /*margin-top: -250px;*/
-    /*margin-bottom: 50px;*/
-    /*top: 200px;*/
-    /*bottom: 100px;*/
-    /*right: 0;*/
-    /*left: 0;*/
 }
 
 #sub:hover{

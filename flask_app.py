@@ -1,6 +1,6 @@
-from flask import Flask, render_template, request, url_for, redirect, flash
-from get_poster import *
-from find_movie import *
+from flask import Flask, render_template, request, url_for, redirect
+from find_modules.get_poster import *
+from find_modules.find_movie import *
 
 
 app = Flask(__name__)
@@ -18,10 +18,6 @@ def homepage():
             popularity = request.form['pop']
             print(year, rating, genres, popularity)
             movie = find_movie(year, rating, popularity, genres)
-            # movie_name = movie[0]
-            # movie_genres = movie[2]
-            # votes = movie[3]
-            # movie_rating = movie[-1]
             poster = get_poster(movie[0])
             info = {
                 'name': movie[0],
@@ -32,22 +28,16 @@ def homepage():
                 'poster': poster
             }
             print(poster)
+            print(info)
             return render_template('movie.html', info=info)
         except NoSuchMovie as e:
-            print(e)
-            print("Mesht no movies")
-            error = "Something went wrong. Please try again"
-        #     # flash(error)
             return redirect(url_for('goback'))
         except NoPoster as e:
-            print(e)
             error = "Something went wrong. Please try again"
             return render_template('homepage.html', error=error)
         except:
             return render_template('homepage.html')
     return render_template('homepage.html')
-
-@app.route
 
 
 @app.route("/case1", methods=["GET", "POST"])

@@ -1,6 +1,6 @@
 body{
     background-image: url("back1.jpg");
-    background-size: cover;
+    background-size: auto;
 }
 
 #title{
@@ -22,18 +22,14 @@ body{
     margin-right: auto;
 }
 #block {
-    /*border-radius: 50px;*/
     position: absolute;
-    /*background: #cccccc;*/
     margin: auto;
-    top: 550px;
+    top: 130px;
     right: 0;
     bottom: 0;
-    left: 0;
-    /*border: 10px solid lightskyblue;*/
+    left: 650px;
     height: 50px;
     width: 200px;
-    /*display: flex;*/
     align-items: center;
     justify-content: center;
     text-align: center;
